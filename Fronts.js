@@ -23,4 +23,27 @@ class LinkedList {
         this.head = new_node;
         return this;
     }
+
+    removeFront() {
+        let removedNode = this.head;
+        this.head = removedNode.next;
+        removedNode.next = null;
+        return this.head;
+    }
+
+    front() {
+        return this.head.data;
+    }
 }
+
+let myGamerLinkedList = new LinkedList();
+
+myGamerLinkedList.addFront(1);
+myGamerLinkedList.addFront(69);
+myGamerLinkedList.addFront(420);
+myGamerLinkedList.addFront(99);
+console.log(myGamerLinkedList);
+
+myGamerLinkedList.removeFront();
+console.log(myGamerLinkedList);
+console.log(myGamerLinkedList.front());
