@@ -34,6 +34,16 @@ class LinkedList {
     front() {
         return this.head.data;
     }
+
+    display() {
+        let runner = this.head;
+        let list = "";
+        while (runner !== null) {
+            list = list + "," + runner.data;
+            runner = runner.next;
+        }
+        return list;
+    }
 }
 
 let myGamerLinkedList = new LinkedList();
@@ -47,3 +57,4 @@ console.log(myGamerLinkedList);
 myGamerLinkedList.removeFront();
 console.log(myGamerLinkedList);
 console.log(myGamerLinkedList.front());
+console.log(myGamerLinkedList.display());
