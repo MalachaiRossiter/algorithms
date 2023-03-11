@@ -3,6 +3,7 @@
  * @return {number}
  */
 var reverse = function(x) {
+    //checks to see if the number is negative so that it can either save the negative in front
     const isNegative = x < 0;
     const xStrArr = Math.abs(x).toString().split("");
     const reversStr = xStrArr.reverse().join("");
