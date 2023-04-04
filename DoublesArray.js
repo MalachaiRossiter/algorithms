@@ -1,12 +1,16 @@
 var removeElement = function(nums, val) {
-    for (i=0; i<nums.length; i++){
+    for (i=0; i<nums.length;){
         if (val !== nums[i]){
             nums.splice(i,1);
         }
-        console.log(nums);
+        else {
+            i++;
+        }
     }
+    console.log(nums)
     k = nums.length;
+    console.log(k);
     return [nums, k]
 };
 
-removeElement([3,2,2,3], 3);
+console.log(removeElement([3,2,2,5], 5));
